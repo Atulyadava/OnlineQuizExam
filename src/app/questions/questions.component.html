@@ -1,0 +1,68 @@
+<div class="container">
+<div class="card">
+    <div class="d-flex justify-content-between p-3">
+        <div class="image">
+            <img src="../../assets/quize.webp" alt="logo" width="90">
+        </div>
+        <div class="quiz-header">
+           <h4 style="font-family: cursive;">Angular & typescript</h4>
+           <span style="font-style: italic;">welcome {{name}}</span>
+        </div>
+    </div>
+   <ng-container *ngIf="!isQuizCompleted">
+    <div class="d-flex justify-content-around py-3">
+      <div class="score">
+        <h5>{{points}} points</h5>
+      </div>
+      <div class="question-remaining">
+         <span style="font-style: italic;">Question {{currentQuestion+1}} of {{QuestionList.length}}</span>
+      </div>
+      <div class="timer">
+      <h5>{{counter}} sec ⏰</h5> 
+      </div>
+     </div>
+     <div class="progress mb-3">
+         <div class="progress-bar bg-info" role="progressbar" [ngStyle]="{'width': progress+'%'}" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+       </div>
+       <div class="question">
+            <div class="card">
+             <h3>{{QuestionList[currentQuestion]?.questionText}}</h3>
+            </div>
+       </div>
+       <div class="options">
+           <ol *ngFor="let option of QuestionList[currentQuestion]?.options">
+            <li (click)="answer(currentQuestion+1,option)">
+             <div appChangeBg [isCorrect]="option.correct" class="card">
+ 
+               {{option.text}}
+ 
+             </div>
+            </li>
+            
+         </ol>
+       </div>
+       <div class="d-flex justify-content-between">
+         <button class="btn btn-primary" (click)="previusQuestion()" [disabled]="currentQuestion===0">previous
+         </button>
+         <button class="btn btn-danger" (click)="resetQuiz()">refreshing</button>
+         <button class="btn btn-primary" (click)="nextQuestion()" [disabled]="currentQuestion===QuestionList.length-1">Next</button>
+        
+ 
+       </div>
+   </ng-container>
+
+   <ng-container *ngIf="isQuizCompleted">
+    <div class="raw d-flex justify-content-between">
+      <img style="width: 50%;" class="img-fluid com-sm-12 mx-auto" src="../../assets/emoji1.png" alt="logo">
+      <div class="result text-center col-md-6 col-sm-12">
+        <h3>congratulations!! <br> you complet yourQuiz <br> here your result is below</h3>
+        <p>Total Question Attemed : {{QuestionList.length}} </p>
+        <p>Total correct Answers :{{currectAnswer}} </p>
+        <p>Total wronge Anwrers : {{incorrectAnswer}}</p>
+        <p>Your Result :{{points}} points </p>
+      </div>
+    </div>
+   </ng-container>
+
+</div>
+</div>

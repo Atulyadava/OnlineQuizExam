@@ -1,0 +1,17 @@
+<div class="container bg-light py-5">
+    <h1 class="display-5 fw-bold">welcome for today's quiz</h1>
+    <p class="col-md-8 fs-4">you have 5 questions .eatch will give you same 10 points </p><br>
+    <h4>Rules:</h4>
+    <ol>
+        <li>correct Question give you 10 points</li>
+        <li>incorrect question give you -10 points</li>
+        <li>you have 60 second of time for each question</li>
+        <li>refreshing page quize will start again</li>
+    </ol>
+    <h1 style="font-family: cursive;text-align:center">all the best</h1>
+    <div class="name col-md-4 my-3">
+      <label for="">Enter your name:</label>
+      <input #name type="text" class="form-control">
+    </div>
+      <button class="btn btn-primary btn-lg" routerLink="/questions" (click)="startQuiz()">Start your quiz</button>
+</div>

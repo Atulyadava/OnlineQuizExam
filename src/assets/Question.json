@@ -1,0 +1,94 @@
+{
+    "Question":[
+        {
+            "questionText":"which of the folling does typescript use to specify types",
+            "options":[{
+                "text":";",
+                "correct":"true"
+            },
+            {
+                "text":":"
+            },
+            {
+                "text":"!"
+            },
+            {
+                "text":"$"
+            }
+        ]
+        },
+        {
+            "questionText":"What is the inherited type for the variable example in 'const example = ['Dylan']'?",
+            "options":[{
+                "text":"any[]"
+               
+            },
+            {
+                "text":"string"
+            },
+            {
+                "text":"string[]",
+                "correct":"true"
+            },
+            {
+                "text":"unknown[]"
+            }
+        ]
+        },
+        {
+            "questionText":"How many components typescript has?",
+            "options":[{
+                "text":"3",
+                "correct":"true"
+               
+            },
+            {
+                "text":"4"
+            },
+            {
+                "text":"5"
+            },
+            {
+                "text":"6"
+            }
+        ]
+        },
+        {
+            "questionText":"TypeScript supports how many types of comments?",
+            "options":[{
+                "text":"1"
+               
+               
+            },
+            {
+                "text":"2",
+                "correct":"true"
+            },
+            {
+                "text":"3"
+            },
+            {
+                "text":"4"
+            }
+        ]
+        },
+        {
+            "questionText":"TypeScript is ?",
+            "options":[{
+                "text":"Case-sensitive",
+                "correct":"true"       
+            },
+            {
+                "text":"Case-insensitive",
+                "correct":"true"
+            },
+            {
+                "text":"depends on typescript version"
+            },
+            {
+                "text":"Non of these"
+            }
+        ]
+        }
+    ]
+}
